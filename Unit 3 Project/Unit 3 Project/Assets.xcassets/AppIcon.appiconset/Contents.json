@@ -1,0 +1,14 @@
+{
+  "images" : [
+    {
+      "filename" : "camera-film-icon-2083753726.jpg",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
