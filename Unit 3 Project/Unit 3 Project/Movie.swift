@@ -1,8 +1,12 @@
 import Foundation
 
+//
+struct moviesResponse: Decodable {
+    let results: [Movie]
+}
 
 //Movie model struct
-struct Movie {
+struct Movie: Decodable {
     let movieName: String
     let movieDetail: String
     let posterImage: URL
