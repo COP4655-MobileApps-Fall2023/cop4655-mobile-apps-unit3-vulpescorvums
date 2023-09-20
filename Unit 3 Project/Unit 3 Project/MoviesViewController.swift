@@ -10,7 +10,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO: Pt 1 - Set tracks property with mock tracks array
+        // TODO: Pt 1 - Set moviess property with mock movies array
         //movies = Movie.mockMovies
         
         
@@ -30,30 +30,18 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
             if let error = error {
                 print("❌ Network error: \(error.localizedDescription)")
             }
-
             // Make sure we have data
             guard let data = data else {
                 print("❌ Data is nil")
                 return
             }
-
             do {
-                
                 // Create a JSON Decoder
                 let decoder = JSONDecoder()
                 
-                // Create a date formatter
-                //let dateFormatter = DateFormatter()
-
-                // Set a custom date format based on what we see coming back in the JSON
-                //dateFormatter.dateFormat = "yyyy-MM-dd"
-
-                // Set the decoding strategy on the JSON decoder to use our custom date format
-                //decoder.dateDecodingStrategy = .formatted(dateFormatter)
-                
                 // Use the JSON decoder to try and map the data to our custom model.
-                // TrackResponse.self is a reference to the type itself, tells the decoder what to map to.
-                let response = try decoder.decode(moviesResponse.self, from: data)
+                // MoviesResponse.self is a reference to the type itself, tells the decoder what to map to.
+                let response = try decoder.decode(MoviesResponse.self, from: data)
 
                 // Access the array of movies from the `results` property
                 let movies = response.results
@@ -76,11 +64,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
 
         // Initiate the network request
         task.resume()
-        print("👋 Below the closure")
-        print(movies)
-
-        tableView.dataSource = self
         
+        print(movies)
+        tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
     }
     

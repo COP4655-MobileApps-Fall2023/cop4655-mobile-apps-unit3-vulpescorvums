@@ -14,5 +14,3 @@ struct PosterSearchResponse: Decodable {
 struct Poster: Decodable {
     let poster_path: URL
 }
-
-

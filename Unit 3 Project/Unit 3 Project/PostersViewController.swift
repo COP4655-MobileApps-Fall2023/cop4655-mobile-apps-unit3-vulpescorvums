@@ -6,18 +6,44 @@
 //
 
 import UIKit
+import Nuke
 
-class PostersViewController: UIViewController {
+class PostersViewController: UIViewController, UICollectionViewDataSource {
+    
+    var movie: Movie!
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        posters.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // Get a collection view cell (based in the identifier you set in storyboard) and cast it to our custom PosterCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as! PosterCell
 
+        // Use the indexPath.item to index into the posters array to get the corresponding poster
+        let poster = posters[indexPath.item]
+
+        // Get the artwork image url
+        //let imageUrl = poster.poster_path
+
+        let imageUrl = URL(string: "https://image.tmdb.org/t/p/w500" + poster.poster_path.absoluteString)
+        
+        // Set the image on the image view of the cell
+        Nuke.loadImage(with: imageUrl, into: cell.posterImageView)
+
+        return cell
+    }
+    
     var posters: [Poster] = []
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         collectionView.dataSource = self
-        // Create a search URL for fetching albums (`entity=album`)
-        let url = URL(string: "https://itunes.apple.com/search?term=sum_41&attribute=artistTerm&entity=album&media=music")!
+        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=47cafbc1319e0d5e2545baba13898b79")!
         let request = URLRequest(url: url)
 
         let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in

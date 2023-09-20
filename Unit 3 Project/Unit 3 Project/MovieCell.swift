@@ -8,11 +8,12 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var posterImageView: UIImageView!
     
     func configure(with movie: Movie) {
-        movieNameLabel.text = movie.movieName
-        movieDetailLabel.text = movie.movieDetail
+        movieNameLabel.text = movie.original_title
+        movieDetailLabel.text = movie.overview
+        let imageUrl = URL(string: "https://image.tmdb.org/t/p/w500" + movie.poster_path.absoluteString)
 
         // Load image async via Nuke library image loading helper method
-        Nuke.loadImage(with: movie.posterImage, into: posterImageView)
+        Nuke.loadImage(with: imageUrl!, into: posterImageView)
     }
     
     override func awakeFromNib() {

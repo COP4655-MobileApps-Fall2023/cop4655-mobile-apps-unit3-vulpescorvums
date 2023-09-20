@@ -15,22 +15,16 @@ class DetailViewcontroller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Nuke.loadImage(with: movie.posterImage, into: posterImageView)
+        let imageUrl = URL(string: "https://image.tmdb.org/t/p/w500" + movie.poster_path.absoluteString)
+        Nuke.loadImage(with: imageUrl, into: posterImageView)
         
         // Set labels with the associated movie values.
-        movieNameLabel.text = movie.movieName
-        movieDetailLabel.text = movie.movieDetail
-        voteAverageLabel.text = movie.vote_average
-        votesLabel.text = movie.vote_count
-        popularityLabel.text = movie.popularity
+        movieNameLabel.text = movie.original_title
+        movieDetailLabel.text = movie.overview
+        voteAverageLabel.text = "\(movie.vote_average)"
+        votesLabel.text = "\(movie.vote_count)"
+        popularityLabel.text = "\(movie.popularity)"
         
-        // Create a date formatter to style our date and convert it to a string
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        //releaseDateLabel.text = dateFormatter.string(from: movie.releaseDate)
-
-        // Use helper method to convert milliseconds into `mm:ss` string format
-        //durationLabel.text = formattedTrackDuration(with: movie.trackTimeMillis)
     }
         
         /*

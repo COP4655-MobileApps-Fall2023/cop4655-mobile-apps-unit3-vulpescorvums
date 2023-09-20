@@ -19,6 +19,7 @@
 		09D8F76E2AB0EC45004E9F59 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 09D8F76D2AB0EC45004E9F59 /* Nuke */; };
 		09F8E1772ABA8AB700973B17 /* PostersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8E1762ABA8AB700973B17 /* PostersViewController.swift */; };
 		09F8E1792ABA8F1300973B17 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8E1782ABA8F1300973B17 /* Poster.swift */; };
+		09F8E17D2ABA94F600973B17 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8E17C2ABA94F600973B17 /* PosterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		09D8F76A2AB0E931004E9F59 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		09F8E1762ABA8AB700973B17 /* PostersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostersViewController.swift; sourceTree = "<group>"; };
 		09F8E1782ABA8F1300973B17 /* Poster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
+		09F8E17C2ABA94F600973B17 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				0986FA7B2AAF712400E325E1 /* AppDelegate.swift */,
 				09F8E1782ABA8F1300973B17 /* Poster.swift */,
 				09F8E1762ABA8AB700973B17 /* PostersViewController.swift */,
+				09F8E17C2ABA94F600973B17 /* PosterCell.swift */,
 				0986FA7D2AAF712400E325E1 /* SceneDelegate.swift */,
 				0986FA812AAF712400E325E1 /* Main.storyboard */,
 				0986FA842AAF712600E325E1 /* Assets.xcassets */,
@@ -163,6 +166,7 @@
 			files = (
 				09D8F7692AB0C4A3004E9F59 /* DetailViewcontroller.swift in Sources */,
 				09D8F76B2AB0E931004E9F59 /* MovieCell.swift in Sources */,
+				09F8E17D2ABA94F600973B17 /* PosterCell.swift in Sources */,
 				0986FA7C2AAF712400E325E1 /* AppDelegate.swift in Sources */,
 				09D8F7672AB0C13D004E9F59 /* Movie.swift in Sources */,
 				09F8E1792ABA8F1300973B17 /* Poster.swift in Sources */,
