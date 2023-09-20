@@ -92,7 +92,7 @@
                             <constraint firstItem="kJ5-q2-Tg1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kIx-KP-mJA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Movies" image="popcorn.fill" catalog="system" id="k43-CX-bVi"/>
+                    <tabBarItem key="tabBarItem" title="Movies" image="film" catalog="system" id="k43-CX-bVi"/>
                     <navigationItem key="navigationItem" title="Movies" id="Wyj-QL-Fh0"/>
                     <connections>
                         <outlet property="tableView" destination="kJ5-q2-Tg1" id="HD8-sQ-zBf"/>
@@ -111,20 +111,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="dzf-4n-1VM">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="103" width="500" height="715"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9A8-kW-Ttm">
-                                        <rect key="frame" x="24" y="0.0" width="345" height="231"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="231"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="500" id="5xv-P1-xb7"/>
                                             <constraint firstAttribute="width" constant="500" id="VRC-wx-XOk"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YiQ-ig-grd">
-                                        <rect key="frame" x="26.333333333333343" y="242" width="340.33333333333326" height="231"/>
+                                        <rect key="frame" x="80" y="242" width="340.33333333333331" height="231"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="movieName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idt-3V-teK">
-                                                <rect key="frame" x="98.333333333333343" y="0.0" width="144" height="111.66666666666667"/>
+                                                <rect key="frame" x="98" y="0.0" width="144" height="111.66666666666667"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
@@ -153,7 +153,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q2y-5H-tfA">
-                                                                <rect key="frame" x="32.333333333333336" y="31.666666666666686" width="97.333333333333314" height="21.666666666666671"/>
+                                                                <rect key="frame" x="31.999999999999993" y="31.666666666666629" width="97.333333333333314" height="21.666666666666671"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDf-CD-DEz">
                                                                         <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="21.666666666666668"/>
@@ -162,7 +162,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43J-ir-FHi">
-                                                                        <rect key="frame" x="51.666666666666671" y="0.0" width="45.666666666666671" height="21.666666666666668"/>
+                                                                        <rect key="frame" x="51.666666666666657" y="0.0" width="45.666666666666657" height="21.666666666666668"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                         <color key="textColor" systemColor="systemBackgroundColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -198,7 +198,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="movieDetails" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWr-fz-jjz">
-                                        <rect key="frame" x="147.66666666666666" y="484" width="97.666666666666657" height="231"/>
+                                        <rect key="frame" x="201.33333333333334" y="484" width="97.666666666666657" height="231"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemBackgroundColor"/>
                                         <nil key="highlightedColor"/>
@@ -338,7 +338,7 @@
         <scene sceneID="3dC-iS-vkJ">
             <objects>
                 <navigationController title="Posters" automaticallyAdjustsScrollViewInsets="NO" id="Wxf-6C-GKl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Posters" image="movieclapper.fill" catalog="system" id="kY6-GV-tVe"/>
+                    <tabBarItem key="tabBarItem" title="Posters" image="doc.richtext.th" catalog="system" id="kY6-GV-tVe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eBn-jB-Wg6">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -355,8 +355,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="movieclapper.fill" catalog="system" width="128" height="113"/>
-        <image name="popcorn.fill" catalog="system" width="98" height="128"/>
+        <image name="doc.richtext.th" catalog="system" width="115" height="128"/>
+        <image name="film" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
