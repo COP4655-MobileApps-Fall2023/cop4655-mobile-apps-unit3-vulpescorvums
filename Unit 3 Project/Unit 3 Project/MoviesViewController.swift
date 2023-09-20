@@ -16,7 +16,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         
         // Create a URL for the request
         // In this case, the custom search URL you created in in part 1
-        let url = URL(string: "https://api.themoviedb.org/3/movie/550?api_key=47cafbc1319e0d5e2545baba13898b79")!
+        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=47cafbc1319e0d5e2545baba13898b79")!
 
         // Use the URL to instantiate a request
         let request = URLRequest(url: url)
